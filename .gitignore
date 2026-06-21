@@ -1,0 +1,58 @@
+# ─────────────────────────────────────────────────────────────────
+# ECHO - Voice Insight App — .gitignore
+# ─────────────────────────────────────────────────────────────────
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# ── Virtual Environment ──────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+
+# ── Distribution / Build ─────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+.gitignore
+local_history.txt
+local_reports.txt
+local_users.txt
+secret.key
+voice_insight.db
+
+# ── Security — NEVER push these to GitHub ────────────────────────
+secret.key           # Encryption key (Fernet key — keep private!)
+local_users.txt      # Offline user credentials (contains password hashes)
+local_history.txt    # Encrypted user speech history
+local_reports.txt    # Local report tracking data
+
+# ── IDE / Editor ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ── Generated Output Files ────────────────────────────────────────
+sentiment_chart.png  # Temp chart image (regenerated on report creation)
+users/               # Generated PDF reports folder
+
+# ── Logs & Debug ─────────────────────────────────────────────────
+*.log
+*.tmp
+
+# ── Environment Variables ────────────────────────────────────────
+.env
+.env.local
+.env.production
+
+# ── Compiled / Binary ────────────────────────────────────────────
+*.db                 # SQLite databases (voice_insight.db if used locally)
+*.sqlite

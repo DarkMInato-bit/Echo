@@ -1,0 +1,42 @@
+# ─────────────────────────────────────────
+# ECHO - Voice Insight App
+# Install all dependencies with:
+#   pip install -r requirements.txt
+#
+# macOS additional setup (run once):
+#   brew install portaudio
+#   brew install python-tk@3.10
+# ─────────────────────────────────────────
+
+# GUI Framework
+customtkinter==5.2.2
+pillow==12.2.0
+
+# Speech Recognition
+SpeechRecognition==3.17.0
+PyAudio==0.2.14
+
+# Text-to-Speech & Audio Playback
+gTTS==2.5.4
+playsound==1.2.2
+
+# Sentiment Analysis (NLTK + VADER)
+nltk==3.9.4
+
+# PDF Report Generation
+fpdf==1.7.2
+
+# Sentiment Chart Generation
+matplotlib==3.10.9
+
+# Database
+mysql-connector-python==9.7.0
+
+# Security (Password Hashing + Encryption)
+bcrypt==5.0.0
+cryptography==49.0.0
+
+# macOS Audio Support (required for playsound on macOS)
+# Comment these out on Windows
+pyobjc-core==12.2.1
+pyobjc-framework-Cocoa==12.2.1
